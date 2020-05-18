@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   
   include SessionsHelper
   
-private
+  private
 
   def require_user_logged_in
     unless logged_in?
@@ -10,7 +10,4 @@ private
     end
   end
   
-  def counts(user)
-    @count_tasks = user.tasks.count
-  end
 end
